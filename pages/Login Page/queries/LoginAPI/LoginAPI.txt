@@ -1,0 +1,5 @@
+{{JSON.stringify({
+	'email': emailaddress_input.text,
+	'password': password_input.text,
+	'platform[label]': 'web'
+})}}

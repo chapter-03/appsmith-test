@@ -1,0 +1,104 @@
+{
+    "boxShadow": "none",
+    "widgetName": "hypto_upi_to_email_table",
+    "columnOrder": [
+        "email",
+        "upi_address"
+    ],
+    "isVisibleDownload": true,
+    "topRow": 8,
+    "bottomRow": 47,
+    "parentRowSpace": 1,
+    "isSortable": true,
+    "type": "TABLE_WIDGET",
+    "parentColumnSpace": 1,
+    "dynamicTriggerPathList": [],
+    "dynamicBindingPathList": [
+        {"key": "tableData"},
+        {"key": "primaryColumns.email.computedValue"},
+        {"key": "primaryColumns.upi_address.computedValue"},
+        {"key": "accentColor"}
+    ],
+    "leftColumn": 0,
+    "primaryColumns": {
+        "upi_address": {
+            "isCellVisible": true,
+            "boxShadow": "none",
+            "isDerived": false,
+            "computedValue": "{{hypto_upi_to_email_table.sanitizedTableData.map((currentRow) => ( currentRow.upi_address))}}",
+            "textSize": "0.875rem",
+            "index": 1,
+            "isVisible": true,
+            "label": "upi_address",
+            "fontStyle": "REGULAR",
+            "columnType": "text",
+            "horizontalAlignment": "LEFT",
+            "borderRadius": "0px",
+            "width": 150,
+            "enableFilter": true,
+            "enableSort": true,
+            "id": "upi_address",
+            "verticalAlignment": "CENTER"
+        },
+        "email": {
+            "isCellVisible": true,
+            "boxShadow": "none",
+            "isDerived": false,
+            "computedValue": "{{hypto_upi_to_email_table.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+            "textSize": "0.875rem",
+            "index": 0,
+            "isVisible": true,
+            "label": "email",
+            "fontStyle": "REGULAR",
+            "columnType": "text",
+            "horizontalAlignment": "LEFT",
+            "borderRadius": "0px",
+            "width": 150,
+            "enableFilter": true,
+            "enableSort": true,
+            "id": "email",
+            "verticalAlignment": "CENTER"
+        }
+    },
+    "delimiter": ",",
+    "migrated": true,
+    "derivedColumns": {},
+    "labelTextSize": "0.875rem",
+    "rightColumn": 64,
+    "textSize": "0.875rem",
+    "widgetId": "ciz9krryx6",
+    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "isVisibleFilters": true,
+    "tableData": "{{email_by_hypto_upi_id_query.data}}",
+    "isVisible": true,
+    "label": "Data",
+    "searchKey": "",
+    "fontStyle": "REGULAR",
+    "version": 3,
+    "parentId": "v68ybk3o2d",
+    "serverSidePaginationEnabled": true,
+    "isLoading": false,
+    "isVisibleCompactMode": true,
+    "horizontalAlignment": "LEFT",
+    "isVisibleSearch": true,
+    "childStylesheet": {
+        "button": {
+            "boxShadow": "none",
+            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+        },
+        "iconButton": {
+            "boxShadow": "none",
+            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+            "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+        },
+        "menuButton": {
+            "boxShadow": "none",
+            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+            "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+        }
+    },
+    "borderRadius": "0px",
+    "isVisiblePagination": true,
+    "verticalAlignment": "CENTER"
+}

@@ -1,0 +1,8 @@
+{{
+JSON.stringify({
+	'code': appsmith.store['2fa'].code,
+	'token': appsmith.store.token.trim(),
+	'platform[label]': 'web',
+	'type': appsmith.store['2fa'].type
+})
+}}

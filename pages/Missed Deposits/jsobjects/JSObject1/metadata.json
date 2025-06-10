@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Missed Deposits",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Missed Deposits_JSObject1",
+  "deleted": false,
+  "gitSyncId": "62a1ce40b682113eb38c47bb_62b4057db682113eb38c4bd6"
+}

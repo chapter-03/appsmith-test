@@ -1,0 +1,57 @@
+{
+  "unpublishedPage": {
+    "name": "Login Page",
+    "slug": "login-page",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 650,
+          "containerStyle": "none",
+          "snapRows": 56,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 80,
+          "minHeight": 580,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Login Page_UserInfoAPI",
+              "name": "UserInfoAPI",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.accessKey",
+                "\n(() => {\n  // Safely initialize all values with fallbacks\n  const accessKey = (this.params.accessKey || appsmith.store.accessKey || '').toString();\n  const secretKey = (this.params.secretKey || appsmith.store.secretKey || '').toString();\n  const api = (this.params.api || '/wazirx-falcon/api/v1.0/members/me').toString();\n  const queryParams = (this.params.queryparam || '').toString();\n  const tonce = (this.params.tonce || (tonce_input?.text || '')).toString();\n  const method = (this.params.method || 'GET').toString();\n\n  // Early return if missing essentials\n  if (!accessKey || !secretKey) return 'missing_credentials';\n\n  try {\n    const payload = `${method}|access-key=${accessKey}&tonce=${tonce}|${api}|${queryParams}`;\n    const hmac = forge.hmac?.create();\n    if (!hmac) return 'hmac_unavailable';\n    \n    hmac.start('sha256', secretKey);\n    hmac.update(payload);\n    //return hmac.digest().toHex();\n    var signature = hmac.digest().toHex();\n    console.log('signature', signature);\n    return signature;\n  } catch (e) {\n    console.error('Signature error:', e);\n    return 'signature_error';\n  }\n})()\n",
+                "this.params.tonce || tonce_input.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Login Page",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "6811be8146b37a1d712dd429_682b033a4c2d3f7876874350"
+}

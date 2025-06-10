@@ -1,0 +1,32 @@
+{
+    "boxShadow": "none",
+    "widgetName": "tonce_input",
+    "topRow": 8,
+    "bottomRow": 12,
+    "parentRowSpace": 10,
+    "type": "INPUT_WIDGET",
+    "parentColumnSpace": 16.96875,
+    "dynamicTriggerPathList": [],
+    "resetOnSubmit": true,
+    "leftColumn": 33,
+    "dynamicBindingPathList": [
+        {"key": "defaultText"},
+        {"key": "accentColor"}
+    ],
+    "inputType": "TEXT",
+    "placeholderText": "Tonce",
+    "isDisabled": false,
+    "validation": "true",
+    "labelTextSize": "0.875rem",
+    "isRequired": false,
+    "rightColumn": 50,
+    "widgetId": "au6jtiotyv",
+    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "isVisible": false,
+    "label": "",
+    "version": 1,
+    "parentId": "fayhupixgy",
+    "isLoading": false,
+    "borderRadius": "0px",
+    "defaultText": "{{Date.now().toString()}}"
+}

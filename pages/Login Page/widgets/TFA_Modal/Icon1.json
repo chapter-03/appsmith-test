@@ -1,0 +1,22 @@
+{
+    "labelTextSize": "0.875rem",
+    "boxShadow": "none",
+    "widgetName": "Icon1",
+    "rightColumn": 64,
+    "onClick": "{{closeModal('TFA_Modal')}}",
+    "iconName": "cross",
+    "buttonColor": "#2E3D49",
+    "widgetId": "uszvtil6v2",
+    "topRow": 0,
+    "bottomRow": 6,
+    "isVisible": true,
+    "type": "ICON_BUTTON_WIDGET",
+    "version": 1,
+    "parentId": "y4iac1vvr3",
+    "isLoading": false,
+    "leftColumn": 54,
+    "dynamicBindingPathList": [],
+    "borderRadius": "0px",
+    "buttonVariant": "TERTIARY",
+    "iconSize": 24
+}
