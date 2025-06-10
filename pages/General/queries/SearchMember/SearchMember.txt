@@ -1,3 +1,16 @@
-{
-   "aadhaar_numbers": ["278347205609"]
-}
+{{
+(() => {
+  if (aadhar_to_email_input.text) {
+    return { "aadhaar_numbers": aadhar_to_email_input.text.split(',').map(num => num.trim()) };
+  } else if (pan_to_email_input.text) {
+    return { "pan_numbers": pan_to_email_input.text.split(',').map(p => p.trim()) };
+  } else if (Hypto_upi_id_input.text) {
+    return { "upi_addresses": Hypto_upi_id_input.text.split(',').map(id => id.trim()) };
+  } else if (member_id_email_input.text) {
+    return { "member_ids": member_id_email_input.text.split(',').map(email => parseInt(email.trim())) };
+  } else {
+    return {};
+  }
+})()
+}}
+
